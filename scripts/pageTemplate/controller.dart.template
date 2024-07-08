@@ -1,0 +1,15 @@
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:live_sports_app/pages/{{fileName}}/state.dart';
+
+
+class {{pageName}}Ctrl extends Cubit<{{pageName}}State> {
+  {{pageName}}Ctrl()
+      : super(
+          {{pageName}}State(),
+        ) {
+    initState();
+  }
+
+  initState() async {}
+}

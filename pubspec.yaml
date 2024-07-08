@@ -1,0 +1,46 @@
+name: lys
+description: lys (Run Pubspec Script) allows you to define and run scripts from pubspec.yaml.
+version: 0.0.1
+repository: https://github.com/gonuit/rps
+homepage: https://github.com/gonuit/rps
+issue_tracker: https://github.com/gonuit/rps/issues
+
+executables:
+  rps:
+  lys:
+
+environment:
+  sdk: ">=2.19.4 <4.0.0"
+
+dependencies:
+  yaml: ^3.1.2
+  path: ^1.8.3
+  ffi: ^2.1.0
+  meta: ^1.11.0
+  http_api: ^0.9.0
+  pub_semver: ^2.1.4
+  collection: ^1.18.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.1
+  test: ^1.21.6
+
+scripts:
+  # 启动web开发环境
+  dev: flutter run
+  # 打包安卓 APK
+  build_android: sh ./scripts/build_android.sh
+  # 打包 IOS
+  build_ios: sh ./scripts/build_ios.sh
+  # 生成model代码
+  gen_model: flutter packages pub run build_runner build --delete-conflicting-outputs
+  # 生成静态资源
+  gen_assets: dart ./scripts/gen_assets.dart
+  # 生成基础页面结构
+  gen_page: dart ./scripts/create_page.dart
+  # install pre-commit
+  install: sh ./scripts/install.sh
+  # reset pub
+  reset: |
+    flutter clean
+    flutter pub get

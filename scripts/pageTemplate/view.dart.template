@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:live_sports_app/pages/{{fileName}}/state.dart';
+import 'package:live_sports_app/widgets/common/base_appbar.dart';
+
+class {{pageName}}View extends HookWidget {
+  final {{pageName}}State state;
+
+  const {{pageName}}View({Key? key, required this.state}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      backgroundColor: Colors.white,
+      appBar: BaseAppBar(
+          title: '页面名称',
+          backgroundColor: Colors.transparent,
+          centerTitle: true),
+      body: Text('hello {{pageName}} Page !'),
+    );
+  }
+}

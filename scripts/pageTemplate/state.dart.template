@@ -1,0 +1,10 @@
+
+class {{pageName}}State {
+
+
+  {{pageName}}State();
+
+  {{pageName}}State copyWith() {
+    return {{pageName}}State();
+  }
+}
